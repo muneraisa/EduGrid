@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block content %}
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Courses</h2>
+
+  <div class="row g-4">
+    {% for assignment in assignments %}
+    <div class="col-md-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ assignment.course_name }}</h5>
+
+          <p class="card-text mb-1">
+            <strong>Teacher:</strong> {{ assignment.teacher.username }}
+          </p>
+          <p class="card-text mb-1">
+            <strong>Room:</strong> {{ assignment.room }}
+          </p>
+          <p class="card-text"><strong>Slot:</strong> {{ assignment.slot }}</p>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <p class="text-center">No courses yet.</p>
+    {% endfor %}
+  </div>
+
+  <div class="d-grid mt-4">
+    <a href="{% url 'course_create' %}" class="btn btn-dark btn-lg"
+      >+ New Course</a
+    >
+  </div>
+</div>
+{% endblock %}

@@ -6,6 +6,6 @@ from . import views
 urlpatterns = [
     #router.get('/', controller.home)
     path('', views.home, name='home'),
-    path('out/', views.out, name='out'),
-    path('inside/', views.inside, name='inside'),
+    path("assignments/new/", views.create_assignment, name="course_create"),
+    path("assignments/", views.assignments_list, name="assignments_list"),
 ]

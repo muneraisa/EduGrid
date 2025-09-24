@@ -17,3 +17,35 @@ footer.page-footer {
   display: flex;
   justify-content: space-between;
 }
+
+/* select,
+option {
+  color: black !important;
+  background-color: white !important;
+  display: inline-block !important;
+} */
+
+#logout-btn i {
+  font-size: 1.25rem;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+form input, form select {
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+#logout-btn i {
+  font-size: 1.3rem; /* consistent sizing with navbar */
+}
