@@ -16,6 +16,15 @@
             <strong>Room:</strong> {{ assignment.room }}
           </p>
           <p class="card-text"><strong>Slot:</strong> {{ assignment.slot }}</p>
+          {% if assignment.teacher == user %}
+          <div class="mt-2">
+            <a
+              href="{% url 'course_edit' assignment.pk %}"
+              class="btn btn-sm btn-outline-dark"
+              >Edit</a
+            >
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>
